@@ -9,7 +9,7 @@ import io
 
 app = FastAPI()
 
-model = torchvision.models.mobilenet_v3_small(pretrained=True)
+model = torchvision.models.mobilenet_v3_small(weights=True)
 model.load_state_dict(torch.load('model_v2_2.pth'))
 model.eval()
 
